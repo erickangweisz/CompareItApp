@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="container">
-      <h1>compareit</h1>
+      <h1>{{ title }}</h1>
       <router-outlet></router-outlet>
     </div>
   `,
