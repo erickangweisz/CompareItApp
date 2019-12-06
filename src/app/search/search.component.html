@@ -1,1 +1,21 @@
-<p>search works!</p>
+<form action="/api/search" method="GET">
+    <div class="form-group">
+        <label for="product-name-input">Product</label>
+        <input id="product-name-input" name="term" type="text" class="form-control" placeholder="Search" required>
+    </div>
+
+    <div class="form-group">
+        <label for="shop-select">Shop</label>
+        <select id="shop-select" name="shops" class="form-control" required>
+            <option value="" selected disabled>Select a shop</option>
+            <option value="pccomponentes">PCcomponentes</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="mrps-input">Max results per shop</label>
+        <input id="mrps-input" name="nProductsPerShop" type="number" class="form-control" value="1" min="1" max="10" required>
+    </div>
+
+    <input class="btn btn-primary float-right" type="submit" value="Search">
+</form>
