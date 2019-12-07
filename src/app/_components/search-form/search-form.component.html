@@ -1,21 +1,44 @@
 <form action="/search" method="GET">
-    <div class="form-group">
-        <label for="product-name-input">Product</label>
-        <input id="product-name-input" name="term" type="text" class="form-control" placeholder="Search" required>
-    </div>
+  <div class="form-group">
+    <label for="product-name-input">Product</label>
+    <input
+      id="product-name-input"
+      name="term"
+      type="text"
+      class="form-control"
+      placeholder="Search"
+      required
+      value="xiaomi"
+    />
+  </div>
 
-    <div class="form-group">
-        <label for="shop-select">Shop</label>
-        <select id="shop-select" name="shops[]" multiple class="form-control" required>
-            <option value="" selected disabled>Select a shop</option>
-            <option value="pccomponentes">PCcomponentes</option>
-        </select>
-    </div>
+  <div class="form-group">
+    <label for="shop-select">Shop</label>
+    <select
+      id="shop-select"
+      name="shops[]"
+      class="form-control"
+      multiple
+      required
+    >
+      <option value="" disabled>Select a shop</option>
+      <option value="pccomponentes" selected>PCcomponentes</option>
+    </select>
+  </div>
 
-    <div class="form-group">
-        <label for="mrps-input">Max results per shop</label>
-        <input id="mrps-input" name="nProductsPerShop" type="number" class="form-control" value="1" min="1" max="10" required>
-    </div>
+  <div class="form-group">
+    <label for="mrps-input">Max results per shop</label>
+    <input
+      id="mrps-input"
+      name="nProductsPerShop"
+      type="number"
+      class="form-control"
+      required
+      min="1"
+      max="10"
+      value="1"
+    />
+  </div>
 
-    <input class="btn btn-primary float-right" type="submit" value="Search">
+  <input class="btn btn-primary float-right" type="submit" value="Search" />
 </form>
