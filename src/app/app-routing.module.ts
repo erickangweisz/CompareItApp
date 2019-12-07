@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SearchFormComponent } from './search-form/search-form.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
-  { path: 'searchForm', component: SearchFormComponent },
-  //{ path: 'search', component: ProductListComponent },
-  { path: '**', redirectTo: 'searchForm' }
+  { path: 'search', component: SearchComponent }//,{ path: '**', redirectTo: 'search' }
 ];
 
 @NgModule({
