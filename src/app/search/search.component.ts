@@ -16,16 +16,8 @@ export class SearchComponent implements OnInit {
 
     if (urlParams) {
       this.searchService.getProducts(urlParams).subscribe(res => {
-        console.log(res);
-        //TODO: fill app-product-list with products
-        //products = res.products;
+        this.products = res['resp'].products;
       });
-
-      //Example
-      this.products = [
-        {name: 'Xiaomi MI A2', price: 165.99, url: 'url'},
-        {name: 'Xiaomi MI A2 Lite', price: 144.99, url: 'url'}
-      ];
     } else {
       console.log('No params provided');
     }
