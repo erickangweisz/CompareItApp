@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './_components/search-form/search-form.component';
 import { SearchComponent } from './search/search.component';
+import { ProductListComponent } from './_components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchFormComponent,
-    SearchComponent
+    SearchComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
