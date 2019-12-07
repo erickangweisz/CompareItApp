@@ -12,8 +12,7 @@ export class SearchService {
     private http: HttpClient,
   ) {}
 
-  getProducts(urlParams) {    
-    console.log(`${this.apiUrl}/search${urlParams}`)  
+  getProducts(urlParams) { 
     return this.http.get(`${this.apiUrl}/search${urlParams}`);  
   }
 }
