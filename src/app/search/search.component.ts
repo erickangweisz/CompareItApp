@@ -15,8 +15,12 @@ export class SearchComponent implements OnInit {
     const urlParams = location.search;
 
     if (urlParams) {
-      const products = this.searchService.getProducts(urlParams);
-      //TODO: fill app-product-list con products
+      this.searchService.getProducts(urlParams)
+        .subscribe(res => {
+          console.log(res);
+
+        //TODO: fill app-product-list con products
+      });
     } else {
       console.log('No params provided');
     }
