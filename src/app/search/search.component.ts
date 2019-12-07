@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../_services/search/search.service';
 
 @Component({
   selector: 'app-search',
@@ -6,21 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-
-  constructor() { }
+  constructor(
+    private searchService: SearchService
+  ){}
 
   ngOnInit() {
     const urlParams = location.search;
 
     if (urlParams) {
-      console.log('Abemus params', urlParams);
-
-      //TODO: call api
-      
-      //TODO: fill app-product-list con los products que devuelva la api
-
+      const products = this.searchService.getProducts(urlParams);
+      //TODO: fill app-product-list con products
     } else {
-      console.log('No params bruh');
+      console.log('No params provided');
     }
   }
 }
