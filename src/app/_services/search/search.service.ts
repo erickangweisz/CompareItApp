@@ -6,13 +6,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class SearchService {
-  apiUrl = environment.apiURL;
+  apiUrl: string;
   
-  constructor(
-    private http: HttpClient,
-  ) {}
+  constructor(private http: HttpClient) {
+    this.apiUrl = environment.apiURL;
+  }
 
-  getProducts(urlParams) { 
-    return this.http.get(`${this.apiUrl}/search${urlParams}`);  
+  getProducts(urlParams: string) {
+    return this.http.get(`${this.apiUrl}/search${urlParams}`);
   }
 }
