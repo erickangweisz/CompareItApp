@@ -3,13 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <div class="container">
-      <h1>{{ title }}</h1>
-      <router-outlet></router-outlet>
-    </div>
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
   `,
   styles: []
 })
 export class AppComponent {
-  title = 'CompareItApp';
+  
 }
