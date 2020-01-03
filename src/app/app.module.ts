@@ -11,6 +11,7 @@ import { SearchComponent } from './search/search.component';
 import { ProductListComponent } from './_components/product-list/product-list.component';
 import { ProductListItemComponent } from './_components/product-list-item/product-list-item.component';
 import { NavbarComponent } from './_components/navbar/navbar.component';
+import { SidenavComponent } from './_components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
     SearchComponent,
     ProductListComponent,
     ProductListItemComponent,
-    NavbarComponent
+    NavbarComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
