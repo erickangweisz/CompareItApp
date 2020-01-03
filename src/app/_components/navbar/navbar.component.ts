@@ -21,8 +21,10 @@ export class NavbarComponent implements OnInit {
   toggleSidenav() {
     let action: Action;
 
-    if (!this.opened) action = new ShowAction();
-    else action = new HideAction();
+    if (!this.opened) 
+      action = new ShowAction();
+    else 
+      action = new HideAction();
     
     this.store.dispatch(action);
   }
