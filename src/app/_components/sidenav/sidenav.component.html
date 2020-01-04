@@ -1,7 +1,13 @@
 <mat-sidenav-container>
-    <mat-sidenav mode="side"
-        [(opened)]="opened">sidenav</mat-sidenav>
+
+    <mat-sidenav 
+        mode="side" 
+        [(opened)]="opened">
+        sidenav
+    </mat-sidenav>
+
     <mat-sidenav-content>
         <router-outlet></router-outlet>
     </mat-sidenav-content>
+
 </mat-sidenav-container>
