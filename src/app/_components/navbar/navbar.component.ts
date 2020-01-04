@@ -14,11 +14,17 @@ export class NavbarComponent implements OnInit {
   constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
-    this.store.select('sidenav')
+    this.subscribeToStore();
+  }
+
+  subscribeToStore(): void {
+    this.store
+      .select('sidenav')
       .subscribe(state => this.opened = state);
   }
 
-  toggleSidenav() {
+  // TODO: Create this function like a Service?
+  toggleSidenav(): void {
     let action: Action;
 
     if (!this.opened) 
