@@ -1,4 +1,5 @@
 export interface AppState {
     sidenav: boolean;
-    searchParams: string;
+    termInput: string;
+    selectShops: any;
 }
