@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 import { ProductService } from 'src/app/_services/product/product.service';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app.reducers';
-import { SearchInputAction } from 'src/app/store/search-params/search-params.actions';
+import { TermInputAction } from 'src/app/store/term-input/term-input.actions';
 
 @Component({
   selector: 'app-search-form',
@@ -17,7 +17,8 @@ export class SearchFormComponent implements OnInit {
   showSpinner: boolean;
   products: [];
 
-  term: string
+  term: string;
+  shops: string;
 
   constructor(
     private store: Store<AppState>,
@@ -28,41 +29,43 @@ export class SearchFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.subscribeToStore();
+    this._subscribeToStore();
   }
 
-  subscribeToStore() {
+  _subscribeToStore(): void {
     this.store
-      .select('searchParams')
-      .subscribe(state => console.log(state));
+      .select('selectShops')
+      .subscribe(state => { 
+        this.shops = state
+      });
   }
 
-  searchProducts() {
+  searchProducts(): void {
     if (this.term) {
       this.showSpinner = true;
-      let params = this.getSearchParams();
+      let params = this._getSearchParams();
       
       this.productService.get(params)
         .toPromise()
         .then(response => {
           //this.location.replaceState(response.url);
           this.products = response.body['resp'].products;
-          this.setTermToStore();
+          this._setTermToStore();
           this.showSpinner = false;
         })
         .catch(console.log);
     }
   }
 
-  getSearchParams(): HttpParams {
+  _getSearchParams(): HttpParams {
     let params = new HttpParams();
-    return params.append('shops[]', 'pccomponentes')
+    return params.append('shops[]', this.shops)
                 .append('term', this.term)
                 .append('nProductsPerShop', '3');
   }
 
-  setTermToStore() {
-    let action = new SearchInputAction(this.term);
+  _setTermToStore(): void {
+    let action = new TermInputAction(this.term);
     this.store.dispatch(action);
   }
 }
