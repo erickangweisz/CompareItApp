@@ -1,0 +1,15 @@
+<div class="mat-body-2">Shops:</div>
+<br>
+<mat-button-toggle-group 
+    #group="matButtonToggleGroup" 
+    (change)="onValChange(group.value)" multiple>
+    <mat-button-toggle value="pccomponentes">
+        pccomponentes
+    </mat-button-toggle>
+    <mat-button-toggle value="amazon">
+        shop2
+    </mat-button-toggle>
+    <mat-button-toggle value="aliexpress">
+        shop3
+    </mat-button-toggle>
+</mat-button-toggle-group>
