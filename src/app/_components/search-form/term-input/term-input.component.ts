@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TermInputAction } from 'src/app/store/term-input/term-input.actions';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/store/app.reducers';
 
 @Component({
   selector: 'app-term-input',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./term-input.component.scss']
 })
 export class TermInputComponent implements OnInit {
+  term: string;
 
-  constructor() { }
+  constructor(private store: Store<AppState>) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  setTermToStore(termValue: string): void {
+    let action = new TermInputAction(termValue);
+    this.store.dispatch(action);
   }
-
 }

@@ -1,1 +1,11 @@
-<p>term-input works!</p>
+<div class="box">
+    <mat-form-field appearance="fill">
+        <mat-label>Search a product</mat-label>
+        <input matInput
+            #inputTerm
+            (keyup)="setTermToStore(inputTerm.value)"
+            [(ngModel)]="term"
+            placeholder="Add the name of the article, model or brand..">
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+</div>

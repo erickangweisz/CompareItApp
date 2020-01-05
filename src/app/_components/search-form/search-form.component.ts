@@ -34,14 +34,14 @@ export class SearchFormComponent implements OnInit {
 
   _subscribeToStore(): void {
     this.store
-      .select('selectShops')
       .subscribe(state => { 
-        this.shops = state
+        this.term = state.termInput;
+        this.shops = state.selectShops;
       });
   }
 
   searchProducts(): void {
-    if (this.term) {
+    if (this.term && this.shops) {
       this.showSpinner = true;
       let params = this._getSearchParams();
       
@@ -50,7 +50,6 @@ export class SearchFormComponent implements OnInit {
         .then(response => {
           //this.location.replaceState(response.url);
           this.products = response.body['resp'].products;
-          this._setTermToStore();
           this.term = '';
           this.showSpinner = false;
         })
@@ -63,10 +62,5 @@ export class SearchFormComponent implements OnInit {
     return params.append('shops[]', this.shops)
                 .append('term', this.term)
                 .append('nProductsPerShop', '3');
-  }
-
-  _setTermToStore(): void {
-    let action = new TermInputAction(this.term);
-    this.store.dispatch(action);
   }
 }
