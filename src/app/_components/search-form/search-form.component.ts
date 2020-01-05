@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpParams } from '@angular/common/http'
-import { environment } from 'src/environments/environment';
 import { Location } from '@angular/common';
 import { ProductService } from 'src/app/_services/product/product.service';
 import { Store } from '@ngrx/store';
