@@ -1,12 +1,12 @@
-<input
-  [(ngModel)]="term"
-  name="term"
-  type="text"
-  class="form-control"
-  placeholder="Search product"
-  required
-  value=""
-/>
+<div class="box">
+  <mat-form-field appearance="fill">
+    <mat-label>Search a product</mat-label>
+    <input matInput required
+      [(ngModel)]="term"
+      placeholder="Add the name of the article, model or brand..">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
 
 <div class="form-group">
   <label for="mrps-input">Max results per shop</label>
