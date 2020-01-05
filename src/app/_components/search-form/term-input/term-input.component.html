@@ -1,6 +1,6 @@
 <div class="box">
     <mat-form-field appearance="fill">
-        <mat-label>Search a product</mat-label>
+        <mat-label>Searcher</mat-label>
         <input matInput
             #termInput
             (keyup)="setTermToStore(termInput.value)"
@@ -8,6 +8,8 @@
             placeholder="Put a name of an article, model or brand..">
         <mat-icon matSuffix 
             (click)="searchProducts()"
-            style="cursor: pointer;">search</mat-icon>
+            style="cursor: pointer">
+            search
+        </mat-icon>
     </mat-form-field>
 </div>
