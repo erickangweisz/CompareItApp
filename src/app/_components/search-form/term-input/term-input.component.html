@@ -2,10 +2,9 @@
     <mat-form-field appearance="fill">
         <mat-label>Search a product</mat-label>
         <input matInput
-            #inputTerm
-            (keyup)="setTermToStore(inputTerm.value)"
-            [(ngModel)]="term"
-            placeholder="Add the name of the article, model or brand..">
+            #termInput
+            (keyup)="setTermToStore(termInput.value)"
+            placeholder="Put a name of an article, model or brand..">
         <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
 </div>
