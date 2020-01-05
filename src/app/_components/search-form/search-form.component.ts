@@ -5,7 +5,6 @@ import { Location } from '@angular/common';
 import { ProductService } from 'src/app/_services/product/product.service';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app.reducers';
-import { TermInputAction } from 'src/app/store/term-input/term-input.actions';
 
 @Component({
   selector: 'app-search-form',
@@ -13,18 +12,17 @@ import { TermInputAction } from 'src/app/store/term-input/term-input.actions';
   styleUrls: ['./search-form.component.scss']
 })
 export class SearchFormComponent implements OnInit {
-  apiUrl: string;
   showSpinner: boolean;
   products: [];
 
   term: string;
   shops: string;
+  nProducts: number;
 
   constructor(
     private store: Store<AppState>,
     private productService: ProductService,
     private location: Location) {
-    this.apiUrl = environment.apiURL;
     this.showSpinner = false;
   }
 
@@ -37,6 +35,7 @@ export class SearchFormComponent implements OnInit {
       .subscribe(state => { 
         this.term = state.termInput;
         this.shops = state.selectShops;
+        this.nProducts = state.nProductsSlide;
       });
   }
 
@@ -61,6 +60,6 @@ export class SearchFormComponent implements OnInit {
     let params = new HttpParams();
     return params.append('shops[]', this.shops)
                 .append('term', this.term)
-                .append('nProductsPerShop', '3');
+                .append('nProductsPerShop', this.nProducts.toString());
   }
 }
