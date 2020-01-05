@@ -21,6 +21,7 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
 import { SidenavComponent } from './_components/sidenav/sidenav.component';
 import { environment } from 'src/environments/environment';
 import { SelectShopsComponent } from './_components/search-form/select-shops/select-shops.component';
+import { TermInputComponent } from './_components/search-form/term-input/term-input.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SelectShopsComponent } from './_components/search-form/select-shops/sel
     ProductListItemComponent,
     NavbarComponent,
     SidenavComponent,
-    SelectShopsComponent
+    SelectShopsComponent,
+    TermInputComponent
   ],
   imports: [
     BrowserModule,
