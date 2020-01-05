@@ -1,5 +1,6 @@
 export interface AppState {
     sidenav: boolean;
     termInput: string;
-    selectShops: any;
+    selectShops: any; // TODO: type it
+    nProductsSlide: number;
 }
