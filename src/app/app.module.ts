@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './_modules/material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -45,6 +46,7 @@ import { NproductsSlideComponent } from './_components/search-form/nproducts-sli
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FlexLayoutModule,
     StoreModule.forRoot({ 
       sidenav: SidenavReducer,
       termInput: TermInputReducer,
