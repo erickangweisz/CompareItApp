@@ -4,7 +4,10 @@
         <input matInput
             #termInput
             (keyup)="setTermToStore(termInput.value)"
+            (keyup.enter)="searchProducts()"
             placeholder="Put a name of an article, model or brand..">
-        <mat-icon matSuffix>search</mat-icon>
+        <mat-icon matSuffix 
+            (click)="searchProducts()"
+            style="cursor: pointer;">search</mat-icon>
     </mat-form-field>
 </div>
