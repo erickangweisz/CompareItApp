@@ -11,6 +11,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { SidenavReducer } from './store/sidenav/sidenav.reducer';
 import { TermInputReducer } from './store/term-input/term-input.reducer';
 import { SelectShopsReducer } from './store/select-shops/select-shops.reducer';
+import { NProductsSlideReducer } from './store/nproducts-slide/nproducts-slide.reducer';
 
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './_components/search-form/search-form.component';
@@ -22,6 +23,7 @@ import { SidenavComponent } from './_components/sidenav/sidenav.component';
 import { environment } from 'src/environments/environment';
 import { SelectShopsComponent } from './_components/search-form/select-shops/select-shops.component';
 import { TermInputComponent } from './_components/search-form/term-input/term-input.component';
+import { NproductsSlideComponent } from './_components/search-form/nproducts-slide/nproducts-slide.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { TermInputComponent } from './_components/search-form/term-input/term-in
     NavbarComponent,
     SidenavComponent,
     SelectShopsComponent,
-    TermInputComponent
+    TermInputComponent,
+    NproductsSlideComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { TermInputComponent } from './_components/search-form/term-input/term-in
     StoreModule.forRoot({ 
       sidenav: SidenavReducer,
       termInput: TermInputReducer,
-      selectShops: SelectShopsReducer
+      selectShops: SelectShopsReducer,
+      nProductsSlide: NProductsSlideReducer
     }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
