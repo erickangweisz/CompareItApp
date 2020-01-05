@@ -1,21 +1,8 @@
-<app-term-input></app-term-input>
+<div>
+  <app-term-input></app-term-input>
+  <button (click)="searchProducts()" class="btn btn-primary float-right" value="Search">buscar</button>
 
-<div class="form-group">
-  <label for="mrps-input">Max results per shop</label>
-  <input
-    id="mrps-input"
-    name="nProductsPerShop"
-    type="number"
-    class="form-control"
-    required
-    min="1"
-    max="10"
-    value="3"
-  />
+  <!-- search results -->
+  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+  <app-product-list [products]="products"></app-product-list>
 </div>
-
-<button (click)="searchProducts()" class="btn btn-primary float-right" value="Search">buscar</button>
-
-<!-- search results -->
-<mat-spinner *ngIf="showSpinner"></mat-spinner>
-<app-product-list [products]="products"></app-product-list>
