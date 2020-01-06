@@ -48,7 +48,6 @@ export class SearchFormComponent implements OnInit {
         .then(response => {
           //this.location.replaceState(response.url);
           this.products = response.body['resp'].products;
-          this.term = '';
           this.showSpinner = false;
         })
         .catch(console.log);
