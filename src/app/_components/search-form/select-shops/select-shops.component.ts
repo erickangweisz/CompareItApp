@@ -9,7 +9,15 @@ import { SelectShopsAction } from 'src/app/store/select-shops/select-shops.actio
   styleUrls: ['./select-shops.component.scss']
 })
 export class SelectShopsComponent {
-  constructor(private store: Store<AppState>) {}
+  readonly pccomponentesURL: string;
+  readonly amazonURL: string;
+  readonly aliexpressURL: string;
+
+  constructor(private store: Store<AppState>) {
+    this.pccomponentesURL = 'http://localhost:3087/api/logo/pccomponentes';
+    this.amazonURL        = 'http://localhost:3087/api/logo/amazon';
+    this.aliexpressURL    = 'http://localhost:3087/api/logo/aliexpress';
+  }
 
   onValChange(shops): void {
     this.setShopsToStore(shops);
