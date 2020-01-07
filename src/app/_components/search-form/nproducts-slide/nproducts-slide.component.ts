@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppState } from 'src/app/store/app.reducers';
-import { NProductsSlideAction } from 'src/app/store/nproducts-slide/nproducts-slide.actions';
+import { AppState } from 'src/app/_store/app.reducers';
+import { NProductsSlideAction } from 'src/app/_store/nproducts-slide/nproducts-slide.actions';
 
 @Component({
   selector: 'app-nproducts-slide',

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { AppState } from 'src/app/store/app.reducers';
+import { AppState } from 'src/app/_store/app.reducers';
 import { Store } from '@ngrx/store';
-import { SelectShopsAction } from 'src/app/store/select-shops/select-shops.actions';
+import { SelectShopsAction } from 'src/app/_store/select-shops/select-shops.actions';
 
 @Component({
   selector: 'app-select-shops',

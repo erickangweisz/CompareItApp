@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, Action } from '@ngrx/store';
-import { ShowAction, HideAction } from 'src/app/store/sidenav/sidenav.actions';
-import { AppState } from 'src/app/store/app.reducers';
+import { ShowAction, HideAction } from 'src/app/_store/sidenav/sidenav.actions';
+import { AppState } from 'src/app/_store/app.reducers';
 
 @Component({
   selector: 'app-navbar',

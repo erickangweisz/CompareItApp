@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { TermInputAction } from 'src/app/store/term-input/term-input.actions';
+import { TermInputAction } from 'src/app/_store/term-input/term-input.actions';
 import { Store } from '@ngrx/store';
-import { AppState } from 'src/app/store/app.reducers';
+import { AppState } from 'src/app/_store/app.reducers';
 
 import { SearchFormComponent } from 'src/app/_components/search-form/search-form.component';
 

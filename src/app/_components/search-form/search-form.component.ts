@@ -3,7 +3,7 @@ import { HttpParams } from '@angular/common/http'
 import { Location } from '@angular/common';
 import { ProductService } from 'src/app/_services/product/product.service';
 import { Store } from '@ngrx/store';
-import { AppState } from 'src/app/store/app.reducers';
+import { AppState } from 'src/app/_store/app.reducers';
 
 @Component({
   selector: 'app-search-form',

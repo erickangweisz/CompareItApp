@@ -9,10 +9,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { SidenavReducer } from './store/sidenav/sidenav.reducer';
-import { TermInputReducer } from './store/term-input/term-input.reducer';
-import { SelectShopsReducer } from './store/select-shops/select-shops.reducer';
-import { NProductsSlideReducer } from './store/nproducts-slide/nproducts-slide.reducer';
+import { SidenavReducer } from './_store/sidenav/sidenav.reducer';
+import { TermInputReducer } from './_store/term-input/term-input.reducer';
+import { SelectShopsReducer } from './_store/select-shops/select-shops.reducer';
+import { NProductsSlideReducer } from './_store/nproducts-slide/nproducts-slide.reducer';
 
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './_components/search-form/search-form.component';

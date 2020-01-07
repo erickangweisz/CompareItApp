@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppState } from 'src/app/store/app.reducers';
+import { AppState } from 'src/app/_store/app.reducers';
 
 @Component({
   selector: 'app-sidenav',
