@@ -4,12 +4,12 @@
     #group="matButtonToggleGroup" 
     (change)="onValChange(group.value)" multiple>
     <mat-button-toggle value="pccomponentes">
-        pccomponentes
+        <img [src]="pccomponentesURL" class="image-url">
     </mat-button-toggle>
     <mat-button-toggle value="amazon">
-        shop2
+        <img [src]="amazonURL" class="image-url">
     </mat-button-toggle>
     <mat-button-toggle value="aliexpress">
-        shop3
+        <img [src]="aliexpressURL" class="image-url">
     </mat-button-toggle>
 </mat-button-toggle-group>
