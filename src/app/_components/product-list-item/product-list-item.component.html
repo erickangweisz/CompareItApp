@@ -1,15 +1,21 @@
 <div class="m-card">
 
   <mat-card>
-
+    
     <mat-card-header>
-      <div mat-card-avatar class="card-header-image"></div>
-      <mat-card-title>
+      <img mat-card-avatar 
+        [src]="shopname | shopURL" 
+        class="card-header-image"/>
+
+      <mat-card-title class="card-header-image">
         <a href="{{ product.url }}" target="_blank"> 
           {{ product.name }}
         </a>
       </mat-card-title>
-    <mat-card-subtitle>{{ product.shopname }}</mat-card-subtitle>
+
+      <mat-card-subtitle>
+        {{ product.shopname }}
+      </mat-card-subtitle>
     </mat-card-header>
   
     <img 
@@ -31,7 +37,7 @@
       <button color="primary" mat-button>Details</button>
       <button color="warn" mat-button>Save</button>
     </mat-card-actions>
-  
+
   </mat-card>
 
 </div>
