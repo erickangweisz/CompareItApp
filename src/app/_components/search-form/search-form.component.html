@@ -3,9 +3,6 @@
   <!-- searcher input -->
   <app-term-input></app-term-input>
 
-  <!-- search results -->
-  <app-product-list [products]="products"></app-product-list>
-
   <!-- loading spinner -->
   <div 
     fxLayout="row"
@@ -13,5 +10,8 @@
     fxFlexFill>
     <mat-spinner *ngIf="showSpinner"></mat-spinner>
   </div>
+  
+  <!-- search results -->
+  <app-product-list [products]="products"></app-product-list>
 
 </div>
