@@ -25,6 +25,7 @@ import { environment } from 'src/environments/environment';
 import { SelectShopsComponent } from './_components/search-form/select-shops/select-shops.component';
 import { TermInputComponent } from './_components/search-form/term-input/term-input.component';
 import { NproductsSlideComponent } from './_components/search-form/nproducts-slide/nproducts-slide.component';
+import { ShopURLPipe } from './_pipes/shop-url.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NproductsSlideComponent } from './_components/search-form/nproducts-sli
     SidenavComponent,
     SelectShopsComponent,
     TermInputComponent,
-    NproductsSlideComponent
+    NproductsSlideComponent,
+    ShopURLPipe
   ],
   imports: [
     BrowserModule,
