@@ -1,6 +1,16 @@
-<div class="box">
+<div
+  fxLayout="row wrap" 
+  fxLayout.lt-sm="column" 
+  fxLayoutGap="0.5rem"
+  fxLayoutAlign="center">
+
   <app-product-list-item 
     *ngFor="let product of products" 
-    [product]="product">
+    [product]="product"
+    fxFlex="24"
+    fxFlex.lt-xl="24"
+    fxFlex.lt-lg="32"
+    fxFlex.lt-md="49"
+    fxFlex.lt-sm="99">
   </app-product-list-item>
 </div>
