@@ -8,5 +8,6 @@ mat-sidenav, mat-sidenav-content {
 
 mat-sidenav {
     background-color: #EEEEEE ;
-    width: 18%;
+    max-width: 330px;
+    min-width: 330px;
 }
