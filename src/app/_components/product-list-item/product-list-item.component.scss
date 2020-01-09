@@ -1,14 +1,43 @@
+$darkgray: #292828;
+$whitecard: #EEEEEE;
+
+mat-card {
+  margin: 0.5rem;
+  padding-top: 0.2rem;
+}
+
+mat-card:hover {
+  background-color: $whitecard;
+}
+
 button {
   width: 100%;
   margin-bottom: 3px;
 }
 
-.m-card {
-  max-width: 95%;
-  margin-bottom: 5%;
-  align-items: center;
+img {
+  max-width: 90%;
 }
 
-.card-header-image {
-  background-size: cover;
+a {
+  text-decoration: none;
+}
+
+.avatar {
+  max-width: 90%;
+  margin-bottom: 0.2rem;
+}
+
+#subtitle {
+  margin: 0.7rem;
+}
+
+#name {
+  text-align: center; 
+  color: $darkgray;
+}
+
+#price {
+  color: $darkgray;
+  font-size: 1.3rem;
 }
