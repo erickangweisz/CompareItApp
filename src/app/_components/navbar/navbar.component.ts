@@ -23,7 +23,6 @@ export class NavbarComponent implements OnInit {
       .subscribe(state => this.opened = state);
   }
 
-  // TODO: Create this function like a Service?
   toggleSidenav(): void {
     let action: Action;
 
