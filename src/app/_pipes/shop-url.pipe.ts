@@ -9,6 +9,8 @@ export class ShopURLPipe implements PipeTransform {
     switch (shopname) {
       case 'pccomponentes.com':
         return 'http://localhost:3087/api/imag/pccomponentes';
+      case 'amazon.es':
+        return 'http://localhost:3087/api/imag/amazon';
       default:
         return shopname;
     }
