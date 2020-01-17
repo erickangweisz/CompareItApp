@@ -6,12 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./product-list-item.component.scss']
 })
 export class ProductListItemComponent implements OnInit {
-  shopname: string;
   @Input() product;
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.shopname = this.product['shopname']
-  }
+  ngOnInit(): void {}
 }
