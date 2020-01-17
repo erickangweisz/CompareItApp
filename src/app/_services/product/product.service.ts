@@ -9,7 +9,7 @@ export class ProductService {
   apiUrl: string;
   
   constructor(private http: HttpClient) {
-    this.apiUrl = environment.apiURL;
+    this.apiUrl = environment.apiURL + 'search';
   }
 
   get(params: HttpParams) {
