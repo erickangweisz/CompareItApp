@@ -1,14 +1,13 @@
 <mat-card>
-
   <a href="{{ product.url }}" target="_blank">
     <mat-card-header fxLayoutAlign="center">
       <mat-card-title>
         <div fxLayoutAlign="center">
           <img mat-card-avatar 
             class="avatar"
-            [src]="shopname | shopURL"/>
+            [src]="product.shopImgURL"/>
           <mat-card-subtitle id="subtitle">
-            {{ product.shopname }}
+            {{ product.shopName }}
           </mat-card-subtitle>
         </div>
         <mat-divider></mat-divider>
