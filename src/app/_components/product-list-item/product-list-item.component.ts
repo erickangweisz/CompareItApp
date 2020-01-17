@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-product-list-item',
@@ -6,9 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./product-list-item.component.scss']
 })
 export class ProductListItemComponent implements OnInit {
+  shopImgUrl: string;
   @Input() product;
-
+  
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.product.shopImgURL = environment.apiURL + this.product.shopImgURL;
+  }
 }
